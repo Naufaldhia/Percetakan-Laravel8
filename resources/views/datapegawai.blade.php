@@ -25,24 +25,30 @@
       <th scope="col">Nama Barang</th>
       <th scope="col">Harga</th>
       <th scope="col">Jumlah</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
+    <!-- untuk Menampilkan data -->
+    @foreach ($data as $row)
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
+        <!-- untuk Pemanggilan data Tabel -->
+      <th scope="row">{{ $row->id}}</th>
+      <td>{{ $row->tanggal}}</td>
+      <td>{{ $row->lokasi}}</td>
+      <td>{{ $row->kepada}}</td>
+      <td>{{ $row->bon_faktur}}</td>
+      <td>{{ $row->banyak_barang}}</td>
+      <td>{{ $row->jenis_barang}}</td>
+      <td>{{ $row->nama_barang}}</td>
+      <td>{{ $row->harga}}</td>
+      <td>{{ $row->jumlah}}</td>
       <td>
       <button type="button" class="btn btn-danger">Delete</button>
       <button type="button" class="btn btn-info">Info</button>
       </td>
     </tr>
+    @endforeach
   </tbody>
 </table>
         </div>

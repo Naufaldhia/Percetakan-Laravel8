@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('lokasi');
             $table->string('kepada');
             $table->string('bon_faktur');
-            $table->integer('banyak_barang');
+            $table->bigInteger('banyak_barang');
             $table->enum('jenis_barang', ['lembar', 'rim']);
             $table->string('nama_barang');
-            $table->integer('harga');
-            $table->integer('jumlah');
+            $table->bigInteger('harga');
+            $table->bigInteger('jumlah');
             $table->timestamps();
         });
     }
