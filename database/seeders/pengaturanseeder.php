@@ -13,6 +13,7 @@ class pengaturanseeder extends Seeder
      */
     public function run(): void
     {   // untuk Menghubungkan Table dari Database
+        // php artisan db:seed --class=pengaturanseeder untuk menambahkan data
         DB::table('pengaturans')->insert(
             [
                 'tanggal' => '2005-05-10',

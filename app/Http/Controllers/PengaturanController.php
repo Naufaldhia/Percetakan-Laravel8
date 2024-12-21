@@ -14,6 +14,6 @@ class PengaturanController extends Controller
         // Pemanggilan views/datapegawai.blade.php
         // compact data
         // Foreach digunakan untuk banyak data
-        return view ('datapegawai',compact('data')) ;
+        return view ('datapegawai',compact('data'));
     }
 }
