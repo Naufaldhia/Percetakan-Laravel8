@@ -9,3 +9,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [PengaturanController::class, 'index'])->name('dashboard');
+
+// mesti ditambahkan di pengaturanController.php
+// untuk menampilkan website
+Route::get('/tambahkwitansi', [PengaturanController::class, 'tambahkwitansi'])->name('tambahkwitansi');
+// fungsi untuk menambahkan data ke database
+Route::post('/insertdata', [PengaturanController::class, 'insertdata'])->name('insertdata');

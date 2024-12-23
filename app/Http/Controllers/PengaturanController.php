@@ -16,4 +16,13 @@ class PengaturanController extends Controller
         // Foreach digunakan untuk banyak data
         return view ('datapegawai',compact('data'));
     }
+    // Pemanggilan php.blade
+    public function tambahkwitansi(){
+        return view ('tambahdata');
+    }
+    // fungsi menambahkan data
+    public function insertdata(Request $request){
+        Pengaturan::create($request->all());
+        return redirect()->route('dashboard')->with('success','Data Berhasil di Tambahkan');
+    }
 }

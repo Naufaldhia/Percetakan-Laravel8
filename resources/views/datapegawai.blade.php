@@ -9,8 +9,13 @@
   <body>
     <h1 class="text-center mb-4">Data Kwitansi</h1>
     <div class="container">
-    <button type="button" class="btn btn-success">Tambah Data</button>
+    <a href="/tambahkwitansi" type="button" class="btn btn-success">Tambah Data</a>
         <div class="row">
+          @if ($message = Session::get('success'))
+          <div class="alert alert-success" role="alert">
+          {{ $message }}
+          </div>
+          @endif
             <!-- Pemanggilan Table dari Bootstrap -->
     <table class="table table-striped table-hover">
     <thead>
