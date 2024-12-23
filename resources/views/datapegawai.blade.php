@@ -50,7 +50,7 @@
       <td>{{ $row->jumlah}}</td>
       <td>
       <button type="button" class="btn btn-danger">Delete</button>
-      <button type="button" class="btn btn-info">Info</button>
+      <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Info</a>
       </td>
     </tr>
     @endforeach

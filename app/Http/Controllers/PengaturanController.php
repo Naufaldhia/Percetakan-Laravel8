@@ -25,4 +25,11 @@ class PengaturanController extends Controller
         Pengaturan::create($request->all());
         return redirect()->route('dashboard')->with('success','Data Berhasil di Tambahkan');
     }
+
+    public function tampilkandata($id){
+        $data = Pengaturan::find($id);
+        //dd($data);
+
+        return view('tampildata', compact('data'));
+    }
 }
