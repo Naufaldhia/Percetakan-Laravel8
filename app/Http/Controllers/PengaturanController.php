@@ -32,4 +32,10 @@ class PengaturanController extends Controller
 
         return view('tampildata', compact('data'));
     }
+
+    public function updatedata(Request $request, $id){
+        $data = Pengaturan::find($id);
+        $data->update($request->all());
+        return redirect()->route('dashboard')->with('success','Data Berhasil di Update');
+    }
 }

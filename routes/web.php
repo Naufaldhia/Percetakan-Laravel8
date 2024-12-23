@@ -16,4 +16,6 @@ Route::get('/tambahkwitansi', [PengaturanController::class, 'tambahkwitansi'])->
 // fungsi untuk menambahkan data ke database
 Route::post('/insertdata', [PengaturanController::class, 'insertdata'])->name('insertdata');
 
-Route::get('/tampilkandata/[id]', [PengaturanController::class, 'tampilkandata'])->name('tampilkandata');
+Route::get('/tampilkandata/{id}', [PengaturanController::class, 'tampilkandata'])->name('tampilkandata');
+
+Route::post('/updatedata/{id}', [PengaturanController::class, 'updatedata'])->name('updatedata');
