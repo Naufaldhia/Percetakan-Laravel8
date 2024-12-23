@@ -19,3 +19,4 @@ Route::post('/insertdata', [PengaturanController::class, 'insertdata'])->name('i
 Route::get('/tampilkandata/{id}', [PengaturanController::class, 'tampilkandata'])->name('tampilkandata');
 
 Route::post('/updatedata/{id}', [PengaturanController::class, 'updatedata'])->name('updatedata');
+Route::get('/delete/{id}', [PengaturanController::class, 'delete'])->name('delete');

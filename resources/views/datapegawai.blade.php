@@ -34,11 +34,15 @@
     </tr>
   </thead>
   <tbody>
+    @php
+      $no = 1;
+    @endphp
     <!-- untuk Menampilkan data -->
     @foreach ($data as $row)
     <tr>
+        <!-- no++ itu untuk @php supaya bertambah satu -->
         <!-- untuk Pemanggilan data Tabel -->
-      <th scope="row">{{ $row->id}}</th>
+      <th scope="row">{{ $no++ }}</th>
       <td>{{ $row->tanggal}}</td>
       <td>{{ $row->lokasi}}</td>
       <td>{{ $row->kepada}}</td>
@@ -49,8 +53,8 @@
       <td>{{ $row->harga}}</td>
       <td>{{ $row->jumlah}}</td>
       <td>
-      <button type="button" class="btn btn-danger">Delete</button>
       <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Info</a>
+      <a href="/delete/{{ $row->id }}" class="btn btn-danger">Delete</a>
       </td>
     </tr>
     @endforeach

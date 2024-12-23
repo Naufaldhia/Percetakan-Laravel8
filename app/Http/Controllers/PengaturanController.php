@@ -38,4 +38,10 @@ class PengaturanController extends Controller
         $data->update($request->all());
         return redirect()->route('dashboard')->with('success','Data Berhasil di Update');
     }
+
+    public function delete($id){
+        $data = Pengaturan::find($id);
+        $data->delete();
+        return redirect()->route('dashboard')->with('success','Data Berhasil di Hapus');
+    }
 }
