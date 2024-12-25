@@ -11,12 +11,12 @@ class PengaturanController extends Controller
     public function index(Request $request){
         
         if($request->has('search')){
-            $data = Pengaturan::where('kepada','LIKE','%' .$request->search. '%')->paginate(5);
+            $data = Pengaturan::where('kepada','LIKE','%' .$request->search.'%')->paginate(5);
         }else{
             $data = Pengaturan::paginate(5); 
         }
         // Pemanggilan data Tabel pengaturan semuanya
-        $data = Pengaturan::paginate(5);
+        // $data = Pengaturan::paginate(5);
         // Pemanggilan views/datapegawai.blade.php
         // compact data
         // Foreach digunakan untuk banyak data
