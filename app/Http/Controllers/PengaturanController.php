@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pengaturan;
 use PDF;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\PengaturanExport;
+
 
 class PengaturanController extends Controller
 {
@@ -58,5 +61,10 @@ class PengaturanController extends Controller
         view()->share('data', $data);
         $pdf = PDF::loadview('datapegawai-pdf');
         return $pdf->download('data.pdf');
+    }
+
+    // Pembuatan Export Excel
+    public function exportexcel(){
+        return Excel::download(new PengaturanExport, 'datapegawai.xlsx');
     }
 }

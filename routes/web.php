@@ -23,3 +23,6 @@ Route::get('/delete/{id}', [PengaturanController::class, 'delete'])->name('delet
 
 // Export PDF
 Route::get('/exportpdf', [PengaturanController::class, 'exportpdf'])->name('exportpdf');
+
+// Export Excel
+Route::get('/exportexcel', [PengaturanController::class, 'exportexcel'])->name('exportexcel');

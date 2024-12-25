@@ -21,6 +21,10 @@
     <div class="col-auto">
     <a href="/exportpdf" class="btn btn-info">Export PDF</a>
     </div>
+    <!-- Export Excel -->
+    <div class="col-auto">
+    <a href="/exportexcel" class="btn btn-success">Export Excel</a>
+    </div>
   </div>
       
         <div class="row">
