@@ -8,7 +8,13 @@ use App\Models\Pengaturan;
 class PengaturanController extends Controller
 {
     // Melakukan Pemanggilan data di web.php
-    public function index(){
+    public function index(Request $request){
+        
+        if($request->has('search')){
+            $data = Pengaturan::where('kepada','LIKE','%' .$request->search. '%')->paginate(5);
+        }else{
+            $data = Pengaturan::paginate(5); 
+        }
         // Pemanggilan data Tabel pengaturan semuanya
         $data = Pengaturan::paginate(5);
         // Pemanggilan views/datapegawai.blade.php
