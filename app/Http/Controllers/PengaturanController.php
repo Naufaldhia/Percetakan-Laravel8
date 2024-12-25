@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pengaturan;
+use PDF;
 
 class PengaturanController extends Controller
 {
@@ -49,5 +50,13 @@ class PengaturanController extends Controller
         $data = Pengaturan::find($id);
         $data->delete();
         return redirect()->route('dashboard')->with('success','Data Berhasil di Hapus');
+    }
+    // Pembuatan Export PDF
+    public function exportpdf(){
+        $data = Pengaturan::all();
+
+        view()->share('data', $data);
+        $pdf = PDF::loadview('datapegawai-pdf');
+        return $pdf->download('data.pdf');
     }
 }

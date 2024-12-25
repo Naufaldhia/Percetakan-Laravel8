@@ -20,3 +20,6 @@ Route::get('/tampilkandata/{id}', [PengaturanController::class, 'tampilkandata']
 
 Route::post('/updatedata/{id}', [PengaturanController::class, 'updatedata'])->name('updatedata');
 Route::get('/delete/{id}', [PengaturanController::class, 'delete'])->name('delete');
+
+// Export PDF
+Route::get('/exportpdf', [PengaturanController::class, 'exportpdf'])->name('exportpdf');

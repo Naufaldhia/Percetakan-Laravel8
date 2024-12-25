@@ -17,6 +17,10 @@
       <input type="search" id="inputPassword6" name='search' class="form-control" aria-describedby="passwordHelpInline">
       </form>
     </div>
+    <!-- Export PDF -->
+    <div class="col-auto">
+    <a href="/exportpdf" class="btn btn-info">Export PDF</a>
+    </div>
   </div>
       
         <div class="row">
