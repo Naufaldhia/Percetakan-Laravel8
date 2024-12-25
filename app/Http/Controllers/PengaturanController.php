@@ -10,7 +10,7 @@ class PengaturanController extends Controller
     // Melakukan Pemanggilan data di web.php
     public function index(){
         // Pemanggilan data Tabel pengaturan semuanya
-        $data = Pengaturan::all();
+        $data = Pengaturan::paginate(5);
         // Pemanggilan views/datapegawai.blade.php
         // compact data
         // Foreach digunakan untuk banyak data
