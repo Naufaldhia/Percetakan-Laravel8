@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 // Wajib Digunakan untuk Menjalankan Dashboard
 use App\Http\Controllers\PengaturanController;
 use App\Models\Pengaturan;
+use App\Http\Controllers\LoginController;
 
 Route::get('/', function () {
     $jumlahpegawai = Pengaturan::count();
@@ -13,7 +14,7 @@ Route::get('/', function () {
     return view('welcome', compact('jumlahpegawai','jumlahpegawailembar','jumlahpegawairim'));
 });
 
-Route::get('/dashboard', [PengaturanController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [PengaturanController::class, 'index'])->name('dashboard')->middleware('auth');
 
 // mesti ditambahkan di pengaturanController.php
 // untuk menampilkan website
@@ -31,3 +32,14 @@ Route::get('/exportpdf', [PengaturanController::class, 'exportpdf'])->name('expo
 
 // Export Excel
 Route::get('/exportexcel', [PengaturanController::class, 'exportexcel'])->name('exportexcel');
+
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+
+Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
+
+Route::get('/register', [LoginController::class, 'register'])->name('register');
+
+
+Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
