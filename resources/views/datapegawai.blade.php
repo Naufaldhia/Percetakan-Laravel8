@@ -2,34 +2,34 @@
 @push('css')
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
-        integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"
+    integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 @endpush
 @section('content')
 
 <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <div class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
-                        <h1 class="m-0">Dashboard v2</h1>
-                    </div><!-- /.col -->
-                    <div class="col-sm-6">
-                        <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard v2</li>
-                        </ol>
-                    </div><!-- /.col -->
-                </div><!-- /.row -->
-            </div><!-- /.container-fluid -->
-        </div>
-        <!-- /.content-header -->
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Dashboard</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
 
-        <div class="container">
+    <div class="container">
         <a href="/tambahkwitansi" type="button" class="btn btn-success">Tambah Data</a>
         <div class="row g-3 align-items-center mt-2">
             <div class="col-auto">
@@ -68,30 +68,30 @@
                 </thead>
                 <tbody>
                     @php
-                        $no = 1;
+                    $no = 1;
                     @endphp
                     <!-- untuk Menampilkan data -->
                     @foreach ($data as $index => $row)
-                        <tr>
-                            <!-- no++ itu untuk @php supaya bertambah satu -->
-                            <!-- untuk Pemanggilan data Tabel -->
-                            <!-- $data FirstItem untuk mengurutkan item sesuai nomor -->
-                            <th scope="row">{{ $index + $data->firstItem() }}</th>
-                            <td>{{ $row->tanggal }}</td>
-                            <td>{{ $row->lokasi }}</td>
-                            <td>{{ $row->kepada }}</td>
-                            <td>{{ $row->bon_faktur }}</td>
-                            <td>{{ $row->banyak_barang }}</td>
-                            <td>{{ $row->jenis_barang }}</td>
-                            <td>{{ $row->nama_barang }}</td>
-                            <td>{{ $row->harga }}</td>
-                            <td>{{ $row->jumlah }}</td>
-                            <td>
-                                <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Info</a>
-                                <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
-                                    data-kepada="{{ $row->kepada }}">Delete</a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <!-- no++ itu untuk @php supaya bertambah satu -->
+                        <!-- untuk Pemanggilan data Tabel -->
+                        <!-- $data FirstItem untuk mengurutkan item sesuai nomor -->
+                        <th scope="row">{{ $index + $data->firstItem() }}</th>
+                        <td>{{ $row->tanggal }}</td>
+                        <td>{{ $row->lokasi }}</td>
+                        <td>{{ $row->kepada }}</td>
+                        <td>{{ $row->bon_faktur }}</td>
+                        <td>{{ $row->banyak_barang }}</td>
+                        <td>{{ $row->jenis_barang }}</td>
+                        <td>{{ $row->nama_barang }}</td>
+                        <td>{{ $row->harga }}</td>
+                        <td>{{ $row->jumlah }}</td>
+                        <td>
+                            <a href="/tampilkandata/{{ $row->id }}" class="btn btn-info">Info</a>
+                            <a href="#" class="btn btn-danger delete" data-id="{{ $row->id }}"
+                                data-kepada="{{ $row->kepada }}">Delete</a>
+                        </td>
+                    </tr>
                     @endforeach
                 </tbody>
             </table>
@@ -108,24 +108,24 @@
 @push('scripts')
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
-        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-        
-    @if (Session::has('success'))
-    <script>
-        toastr.success("{{ Session::get('success') }}")
-    </script>
-    @endif
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+    integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-    </body>
+@if (Session::has('success'))
+<script>
+    toastr.success("{{ Session::get('success') }}")
+</script>
+@endif
+
+
+</body>
 <!-- untuk tombol notif di delete -->
 <script>
     $('.delete').click(function() {

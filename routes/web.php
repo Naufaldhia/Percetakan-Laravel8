@@ -8,10 +8,11 @@ use App\Http\Controllers\LoginController;
 
 Route::get('/', function () {
     $jumlahpegawai = Pengaturan::count();
-    $jumlahpegawailembar = Pengaturan::where('jenis_barang','lembar')->count();
-    $jumlahpegawairim = Pengaturan::where('jenis_barang','rim')->count();
+    $jumlahtotal = Pengaturan::sum('jumlah');
+    $jumlahpegawailembar = Pengaturan::where('jenis_barang', 'lembar')->count();
+    $jumlahpegawairim = Pengaturan::where('jenis_barang', 'rim')->count();
 
-    return view('welcome', compact('jumlahpegawai','jumlahpegawailembar','jumlahpegawairim'));
+    return view('welcome', compact('jumlahpegawai', 'jumlahpegawailembar', 'jumlahpegawairim', 'jumlahtotal'));
 });
 
 Route::get('/dashboard', [PengaturanController::class, 'index'])->name('dashboard')->middleware('auth');
