@@ -33,7 +33,6 @@
     letter-spacing: 1px;
   }
 
-  /* Navbar Links */
   .nav-links {
     list-style: none;
     display: flex;
@@ -46,7 +45,7 @@
   .nav-links a {
     text-decoration: none;
     color: white;
-    font-size: 14px; /* Ukuran font yang lebih kecil */
+    font-size: 14px;
     transition: color 0.3s ease;
   }
 
@@ -54,7 +53,6 @@
     color: #ff0000;
   }
 
-  /* Tombol Login dan Daftar */
   .auth-buttons {
     display: flex;
     gap: 10px;
@@ -81,52 +79,38 @@
   }
 </style>
 
-<!-- Header -->
 <nav>
   <div class="logo-section">
-    <img src="../Images/images.jpeg" alt="Profil Logo" />
+    <img src="{{ asset('projek/images.jpeg') }}" alt="Profil Logo" />
     <div class="brand-text">
       <span class="percetakan">Percetakan</span>
       <span class="adi-prima">Adi Prima</span>
     </div>
   </div>
-  <!-- Header Selesai -->
 
-  <!-- Navbar Links -->
   <ul class="nav-links">
     <li>
-      <a href="../Html/index.html">
+      <a href="/tampilan">
         <i class="fas fa-home"></i>
         <span>Home</span>
       </a>
     </li>
     <li>
-      <a href="../Html/isi.html">
-        <i class="fas fa-book"></i>
-        <span>Report</span>
-      </a>
-    </li>
-    <li>
-      <a href="../Html/about.html">
+      <a href="/about">
         <i class="fas fa-question-circle"></i>
         <span>About</span>
       </a>
     </li>
     <li>
-      <a href="../Html/service.html">
+      <a href="/service">
         <i class="fas fa-user"></i>
         <span>Service</span>
       </a>
     </li>
   </ul>
 
-  <!-- Navbar Links Selesai -->
-
-  <!-- Tombol Login dan Daftar -->
   <div class="auth-buttons">
-    <button class="login-btn">Login</button>
-    <button class="register-btn">Daftar</button>
+    <a class="login-btn" href="{{ route('login') }}">Login</a>
+    <a class="register-btn" href="{{ route('register') }}">Daftar</a>
   </div>
-
-  <!-- Tombol Login dan Daftar Selesai -->
 </nav>

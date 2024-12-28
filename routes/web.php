@@ -13,7 +13,7 @@ Route::get('/', function () {
     $jumlahpegawairim = Pengaturan::where('jenis_barang', 'rim')->count();
 
     return view('welcome', compact('jumlahpegawai', 'jumlahpegawailembar', 'jumlahpegawairim', 'jumlahtotal'));
-});
+})->middleware('auth');
 
 Route::get('/dashboard', [PengaturanController::class, 'index'])->name('dashboard')->middleware('auth');
 
@@ -44,3 +44,16 @@ Route::get('/register', [LoginController::class, 'register'])->name('register');
 Route::post('/registeruser', [LoginController::class, 'registeruser'])->name('registeruser');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::get('/tampilan', function () {
+    return view('tampilan');
+})->name('tampilan');
+
+
+Route::get('/service', function () {
+    return view('service');
+})->name('service');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');

@@ -46,7 +46,6 @@
     color: #ff0000;
   }
 
-  /* Social Icons */
   .social-icons {
     display: flex;
     justify-content: center;
@@ -75,47 +74,19 @@
     color: #bbb;
   }
 
-  /* Responsive Design */
   @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      padding: 10px 15px;
-    }
-
-    .nav-links {
-      margin-top: 10px;
-    }
-
-    .auth-buttons {
-      margin-top: 10px;
-    }
-
-    .main-content {
-      flex-direction: column;
-      padding: 20px;
-    }
-
-    .left-column,
-    .right-column {
-      padding: 0;
-      width: 100%;
-    }
-
     .footer-column {
       width: 100%;
     }
   }
 </style>
 
-<!-- Footer -->
 <footer>
   <div class="footer-container">
-    <!-- Get in Touch Section -->
     <div class="footer-column">
       <h3>Get in Touch</h3>
       <p>
-        Hubungi kami untuk informasi lebih lanjut tentang layanan kami. Kami
-        siap membantu Anda!
+        Hubungi kami untuk informasi lebih lanjut tentang layanan kami. Kami siap membantu Anda!
       </p>
       <ul class="contact-info">
         <li><i class="fas fa-envelope"></i> info@adiprint.com</li>
@@ -123,18 +94,15 @@
       </ul>
     </div>
 
-    <!-- Quick Links Section -->
     <div class="footer-column">
       <h3>Quick Links</h3>
       <ul class="quick-links">
-        <li><a href="../Html/index.html">Home</a></li>
-        <li><a href="../Html/about.html">About</a></li>
-        <li><a href="../Html/isi.html">Isi</a></li>
-        <li><a href="../Html/service.html">Service</a></li>
+        <li><a href="/tampilan">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/service">Service</a></li>
       </ul>
     </div>
 
-    <!-- Social Media Section -->
     <div class="footer-column">
       <h3>Follow Us</h3>
       <div class="social-icons">
@@ -149,5 +117,3 @@
     <p>&copy; 2024 Percetakan Adi Prima. All Rights Reserved.</p>
   </div>
 </footer>
-
-<!-- Footer Selesai -->
