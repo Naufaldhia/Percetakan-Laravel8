@@ -1,71 +1,89 @@
 /* Style Utama */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+    background-color: #fff; /* Putih */
+    color: #333; /* Hitam untuk teks utama */
+    line-height: 1.6;
 }
 
 .about-section {
-  padding: 60px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
+    padding: 60px 20px;
+    background-color: #f4f4f4; /* Abu-abu terang */
+    text-align: center;
 }
 
 .about-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #e60000; /* Merah cerah untuk judul utama */
 }
 
 .about-section p {
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto 40px;
+    color: #666; /* Abu-abu gelap */
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
 }
 
 .content-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .about-item {
-  flex: 1 1 300px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    flex: 1 1 300px;
+    background-color: #fff; /* Putih untuk item */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #e60000; /* Merah cerah border untuk kontras */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-item i {
-  font-size: 2em;
-  color: #0073e6;
-  margin-bottom: 10px;
+    font-size: 3em; /* Ukuran ikon besar */
+    color: #e60000; /* Merah cerah untuk ikon */
+    margin-bottom: 15px;
 }
 
 .about-item h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333; /* Teks hitam untuk judul */
 }
 
 .about-item p {
-  color: #555;
+    font-size: 1rem;
+    color: #555; /* Abu-abu gelap untuk deskripsi */
+}
+
+.about-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsif */
 @media (max-width: 768px) {
-  .content-grid {
-    flex-direction: column;
-    gap: 20px;
-  }
+    .content-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .about-section h1 {
+        font-size: 2rem;
+    }
+
+    .about-item {
+        width: 100%;
+    }
 }

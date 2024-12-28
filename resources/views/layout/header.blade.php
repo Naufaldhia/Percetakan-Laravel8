@@ -58,30 +58,49 @@
     gap: 10px;
   }
 
-  .auth-buttons button {
-    padding: 8px 15px;
-    background-color: #ff1010;
+  .auth-buttons a {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #ff1010;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .auth-buttons .login-btn {
+    background-color: #ff1010;
   }
 
   .auth-buttons .register-btn {
     background-color: #28a745;
   }
 
-  .auth-buttons button:hover {
-    background-color: #ff5e5e;
-    transform: scale(1.05);
+  .auth-buttons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .auth-buttons a:active {
+    transform: translateY(1px);
+  }
+
+  .auth-buttons a.register-btn:hover {
+    background-color: #218838;
+  }
+
+  .auth-buttons a.login-btn:hover {
+    background-color: #d91c1c;
   }
 </style>
 
 <nav>
   <div class="logo-section">
-    <img src="{{ asset('projek/images.jpeg') }}" alt="Profil Logo" />
+    <img src="{{ asset('projek/images3.jpeg') }}" alt="Profil Logo" />
     <div class="brand-text">
       <span class="percetakan">Percetakan</span>
       <span class="adi-prima">Adi Prima</span>
@@ -98,13 +117,13 @@
     <li>
       <a href="/about">
         <i class="fas fa-question-circle"></i>
-        <span>About</span>
+        <span>Tentang</span>
       </a>
     </li>
     <li>
       <a href="/service">
         <i class="fas fa-user"></i>
-        <span>Service</span>
+        <span>Layanan</span>
       </a>
     </li>
   </ul>

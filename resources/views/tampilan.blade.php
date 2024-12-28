@@ -64,11 +64,11 @@
     <div class="product-grid">
       <!-- Product Items -->
       @foreach ([
-      ['img' => 'images.jpeg', 'desc' => 'Cetak Box Roti Panas / Kukus di Medan'],
-      ['img' => 'images_anime1.jpeg', 'desc' => 'Buat/Cetak Bon Faktur di Medan'],
-      ['img' => 'pink.jpeg', 'desc' => 'Buat/Cetak Box Crepes di Medan'],
-      ['img' => 'putih.jpg', 'desc' => 'Buat/Cetak Kotak Toast Roti Bakar'],
-      ['img' => 'waifu.jpeg', 'desc' => 'Buat/Cetak Kotak Martabak, Pasta, Roti Bakar di Medan'],
+      ['img' => 'images2.jpg', 'desc' => 'Cetak Box Roti Panas / Kukus di Medan'],
+      ['img' => 'images_anime2.jpg', 'desc' => 'Buat/Cetak Bon Faktur di Medan'],
+      ['img' => 'pink2.jpg', 'desc' => 'Buat/Cetak Box Crepes di Medan'],
+      ['img' => 'putih2.jpg', 'desc' => 'Buat/Cetak Kotak Toast Roti Bakar'],
+      ['img' => 'waifu2.jpg', 'desc' => 'Buat/Cetak Kotak Martabak, Pasta, Roti Bakar di Medan'],
       ] as $product)
       <div class="product-item">
         <img src="{{ asset('projek/' . $product['img']) }}" alt="{{ $product['desc'] }}" />

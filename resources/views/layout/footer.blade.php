@@ -84,32 +84,32 @@
 <footer>
   <div class="footer-container">
     <div class="footer-column">
-      <h3>Get in Touch</h3>
+      <h3>Hubungi Kami</h3>
       <p>
         Hubungi kami untuk informasi lebih lanjut tentang layanan kami. Kami siap membantu Anda!
       </p>
       <ul class="contact-info">
-        <li><i class="fas fa-envelope"></i> info@adiprint.com</li>
-        <li><i class="fab fa-whatsapp"></i> +62 812-3456-7890</li>
+        <li><i class="fas fa-envelope"></i> Percetakanadiprima.com</li>
+        <li><i class="fab fa-whatsapp"></i> +62 896-1351-9840</li>
       </ul>
     </div>
 
     <div class="footer-column">
-      <h3>Quick Links</h3>
+      <h3>Tautan Cepat</h3>
       <ul class="quick-links">
         <li><a href="/tampilan">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/service">Service</a></li>
+        <li><a href="/about">Tentang</a></li>
+        <li><a href="/service">Layanan</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
-      <h3>Follow Us</h3>
+      <h3>Ikuti Kami</h3>
       <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100064256010908"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/adiprimaprinter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/adiprimasuraprinta?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+        <a href="https://id.linkedin.com/in/edwin-adi-prima-percetakan-159879b6"><i class="fab fa-linkedin-in"></i></a>
       </div>
     </div>
   </div>

@@ -19,9 +19,9 @@
 <body class="hold-transition login-page">
   <div class="login-box">
     <!-- /.login-logo -->
-    <div class="card card-outline card-primary">
+    <div class="card card-outline card-red">
       <div class="card-header text-center">
-        <a href="../../index2.html" class="h1"><b>Adi</b>Prima</a>
+        <a href="../../index2.html" class="h1 text-danger[]]][[=[=]]]]]]["><b>Adi</b>Prima</a>
       </div>
       <div class="card-body">
         <p class="login-box-msg">Register in to start your session</p>
@@ -54,7 +54,7 @@
           </div>
           <div class="row">
             <div class="col-8">
-              <div class="icheck-primary">
+              <div class="icheck-danger">
                 <input type="checkbox" id="remember">
                 <label for="remember">
                   Remember Me
@@ -63,7 +63,7 @@
             </div>
             <!-- /.col -->
             <div class="col-4">
-              <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+              <button type="submit" class="btn btn-danger btn-block">Sign In</button>
             </div>
             <!-- /.col -->
           </div>
@@ -72,7 +72,7 @@
 
         <!-- /.social-auth-links -->
         <p class="mb-0">
-          <a href="/login" class="text-center">Login</a>
+          <a href="/login" class="text-center text-danger">Login</a>
         </p>
       </div>
       <!-- /.card-body -->
