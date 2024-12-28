@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard 2</title>
+    <title>Percetakan | Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -39,7 +39,7 @@
                     <a href="index3.html" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="nav-link">Kontak</a>
                 </li>
             </ul>
 
@@ -85,7 +85,7 @@
                                         Brad Diesel
                                         <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">Call me whenever you can...</p>
+                                    <p class="text-sm">Hubungi saya kapan pun Anda bisa...</p>
                                     <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                                 </div>
                             </div>
@@ -102,7 +102,7 @@
                                         John Pierce
                                         <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">I got your message bro</p>
+                                    <p class="text-sm">Aku menerima pesanmu, bro.</p>
                                     <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                                 </div>
                             </div>
@@ -120,32 +120,32 @@
                                         <span class="float-right text-sm text-warning"><i
                                                 class="fas fa-star"></i></span>
                                     </h3>
-                                    <p class="text-sm">The subject goes here</p>
+                                    <p class="text-sm">Subjeknya ada di sini</p>
                                     <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
                                 </div>
                             </div>
                             <!-- Message End -->
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+                        <a href="#" class="dropdown-item dropdown-footer">Lihat Semua Pesan</a>
                     </div>
                 </li>
                 <!-- Notifications Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link" data-toggle="dropdown" href="#">
                         <i class="far fa-bell"></i>
-                        <span class="badge badge-warning navbar-badge">15</span>
+                        <span class="badge badge-warning navbar-badge">10</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                        <span class="dropdown-item dropdown-header">15 Notifications</span>
+                        <span class="dropdown-item dropdown-header">10 Pemberitahuan</span>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-envelope mr-2"></i> 4 new messages
+                            <i class="fas fa-envelope mr-2"></i> 3 new messages
                             <span class="float-right text-muted text-sm">3 mins</span>
                         </a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item">
-                            <i class="fas fa-users mr-2"></i> 8 friend requests
+                            <i class="fas fa-users mr-2"></i> 4 friend requests
                             <span class="float-right text-muted text-sm">12 hours</span>
                         </a>
                         <div class="dropdown-divider"></div>
@@ -154,7 +154,7 @@
                             <span class="float-right text-muted text-sm">2 days</span>
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                        <a href="#" class="dropdown-item dropdown-footer">Lihat Semua Notifikasi</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -178,7 +178,7 @@
             <a href="index3.html" class="brand-link">
                 <img src="{{ asset('template/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">AdiPrima</span>
             </a>
 
             <!-- Sidebar -->
@@ -249,7 +249,7 @@
                                     Dashboard
                                 </p>
                             </a>
-                        </li>  
+                        </li>
                         <li class="nav-item">
                             <a href="/dashboard" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
@@ -258,7 +258,7 @@
                                 </p>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="/logout" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
@@ -266,7 +266,7 @@
                                     Logout
                                 </p>
                             </a>
-                        </li>   
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -286,10 +286,10 @@
 
         <!-- Main Footer -->
         <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+            <strong>Copyright &copy; 2024-2025 <a href="https://adminlte.io">PercetakanAdiPrima.com</a>.</strong>
             All rights reserved.
             <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.1.0
+                <b>Version</b> 4.5.0
             </div>
         </footer>
     </div>
@@ -319,7 +319,8 @@
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <script src="{{ asset('template/dist/js/pages/dashboard2.js') }}"></script>
 
-@stack('scripts')
+    @stack('scripts')
 
 </body>
+
 </html>
