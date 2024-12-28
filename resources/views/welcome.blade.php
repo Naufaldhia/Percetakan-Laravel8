@@ -642,7 +642,7 @@
                             <ul class="products-list product-list-in-card pl-2 pr-2">
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="{{ asset('template/dist/img/default-150x150.png') }}"
+                                        <img src="{{ asset('template/dist/img/images_anime2.jpg') }}"
                                             alt="Product Image" class="img-size-50">
                                     </div>
                                     <div class="product-info">
@@ -656,7 +656,7 @@
                                 <!-- /.item -->
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="{{ asset('template/dist/img/default-150x150.png') }}"
+                                        <img src="{{ asset('template/dist/img/images2.jpg') }}"
                                             alt="Product Image" class="img-size-50">
                                     </div>
                                     <div class="product-info">
@@ -670,7 +670,7 @@
                                 <!-- /.item -->
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="{{ asset('template/dist/img/default-150x150.png') }}"
+                                        <img src="{{ asset('template/dist/img/pink2.jpg') }}"
                                             alt="Product Image" class="img-size-50">
                                     </div>
                                     <div class="product-info">
@@ -687,7 +687,7 @@
                                 <!-- /.item -->
                                 <li class="item">
                                     <div class="product-img">
-                                        <img src="{{ asset('template/dist/img/default-150x150.png') }}"
+                                        <img src="{{ asset('template/dist/img/putih2.jpg') }}"
                                             alt="Product Image" class="img-size-50">
                                     </div>
                                     <div class="product-info">
