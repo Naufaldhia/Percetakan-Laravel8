@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percetakan Adi Prima</title>
+    <link rel="stylesheet" href="../css/Style_Isi.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <div class="container">
+      <h1>Form Input Bon Faktur</h1>
+      <form id="dataFormisi">
+        <label for="tanggalisi">Tanggal:</label>
+        <input type="date" id="tanggalisi" name="tanggal" required /><br />
+
+        <label for="lokasiisi">Lokasi (Medan):</label>
+        <input
+          type="text"
+          id="lokasiisi"
+          name="lokasi"
+          value="Medan"
+          disabled
+        /><br />
+
+        <label for="kepadaisi">Kepada:</label>
+        <input type="text" id="kepadaisi" name="kepada" required /><br />
+
+        <label for="fakturBonisi">Bon / Faktur:</label>
+        <input type="text" id="fakturBonisi" name="fakturBon" required /><br />
+
+        <label for="banyakBarangisi">Banyak Barang:</label>
+        <input
+          type="number"
+          id="banyakBarangisi"
+          name="banyakBarang"
+          required
+        /><br />
+
+        <label for="jenisBarangisi">Jenis Barang:</label>
+        <select id="jenisBarangisi" name="jenisBarang" required>
+          <option value="Lembar">Lembar</option>
+          <option value="Rim">Rim</option></select
+        ><br />
+
+        <label for="namaBarangisi">Nama Barang:</label>
+        <input
+          type="text"
+          id="namaBarangisi"
+          name="namaBarang"
+          required
+        /><br />
+
+        <label for="hargaisi">Harga:</label>
+        <input type="number" id="hargaisi" name="harga" required /><br />
+
+        <button type="submit">Simpan</button>
+      </form>
+
+      <h2>Data yang Dimasukkan:</h2>
+      <table id="dataTableisi">
+        <thead>
+          <tr>
+            <th>Tanggal</th>
+            <th>Bon / Faktur</th>
+            <th>Banyak Barang</th>
+            <th>Nama Barang</th>
+            <th>Harga</th>
+            <th>Jumlah</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Data akan muncul di sini -->
+        </tbody>
+      </table>
+
+      <!-- Section Total Harga -->
+      <div class="total-section">
+        <button id="hitungTotal" onclick="hitungTotalHarga()">
+          Hitung Total Harga
+        </button>
+        <p>Total Harga: <span id="totalHargaisi">Rp 0</span></p>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+    <script>
+      document.getElementById("header").innerHTML = fetch(
+        "../HeaderFooter/header.html"
+      )
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
+
+      document.getElementById("footer").innerHTML = fetch(
+        "../HeaderFooter/footer.html"
+      )
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+    </script>
+    <script src="../Javascript/java.js"></script>
+  </body>
+</html>

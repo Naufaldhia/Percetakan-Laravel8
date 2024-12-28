@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percetakan Adi Prima</title>
+    <link rel="stylesheet" href="../css/Style_Index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <!-- Left Column -->
+      <div class="left-column">
+        <h1>Percetakan Adi Prima</h1>
+        <p>
+          Selamat datang di Percetakan Adi Prima, solusi terbaik untuk semua
+          kebutuhan percetakan Anda. Kami menyediakan berbagai layanan mulai
+          dari pencetakan digital hingga offset printing dengan kualitas terbaik
+          dan harga yang bersaing. Percetakan Adi Prima selalu berkomitmen untuk
+          memberikan pelayanan prima dengan hasil cetak yang memuaskan. Dengan
+          teknologi modern dan tim profesional, kami siap membantu Anda mencetak
+          berbagai jenis produk sesuai kebutuhan Anda.
+        </p>
+      </div>
+
+      <!-- Right Column with Image Slider -->
+      <div class="right-column">
+        <div class="image-slider">
+          <div class="slider">
+            <img
+              src="../Images/images.jpeg"
+              alt="Gambar 1"
+              class="gambar-percetakan"
+            />
+            <img
+              src="../Images/images_anime1.jpeg"
+              alt="Gambar 2"
+              class="gambar-percetakan"
+            />
+            <img
+              src="../Images/pink.jpeg"
+              alt="Gambar 3"
+              class="gambar-percetakan"
+            />
+            <img
+              src="../Images/putih.jpg"
+              alt="Gambar 4"
+              class="gambar-percetakan"
+            />
+            <img
+              src="../Images/waifu.jpeg"
+              alt="Gambar 5"
+              class="gambar-percetakan"
+            />
+          </div>
+          <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next" onclick="changeSlide(1)">&#10095;</button>
+          <!-- Dots for Slide Navigation -->
+          <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Gallery Section -->
+    <div class="product-gallery">
+      <h2>Produk Terbaru</h2>
+      <div class="product-grid">
+        <div class="product-item">
+          <img src="../Images/images.jpeg" alt="Box Roti Panas" />
+          <p>Cetak Box Roti Panas / Kukus di Medan</p>
+        </div>
+        <div class="product-item">
+          <img src="../Images/images_anime1.jpeg" alt="Bon Faktur" />
+          <p>Buat/Cetak Bon Faktur di Medan</p>
+        </div>
+        <div class="product-item">
+          <img src="../Images/pink.jpeg" alt="Box Crepes" />
+          <p>Buat/Cetak Box Crepes di Medan</p>
+        </div>
+        <div class="product-item">
+          <img src="../Images/putih.jpg" alt="Box Toast" />
+          <p>Buat/Cetak Kotak Toast Roti Bakar</p>
+        </div>
+        <div class="product-item">
+          <img src="../Images/waifu.jpeg" alt="Kotak Martabak" />
+          <p>Buat/Cetak Kotak Martabak, Pasta, Roti Bakar di Medan</p>
+        </div>
+        <div class="product-item">
+          <img src="../Images/images.jpeg" alt="Karung Goni" />
+          <p>Cetak / Sablon Karung Goni Beras di Medan</p>
+        </div>
+        <div class="product-item">
+          <img src="../Images/images_anime1.jpeg" alt="Kotak KFC" />
+          <p>Buat/Cetak Box KFC di Medan</p>
+        </div>
+        <div class="product-item">
+          <img src="../Images/pink.jpeg" alt="Box Pizza" />
+          <p>Buat/Cetak Kotak/Box Pizza di Medan</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+      document.getElementById("header").innerHTML = fetch(
+        "../HeaderFooter/header.html"
+      )
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
+
+      document.getElementById("footer").innerHTML = fetch(
+        "../HeaderFooter/footer.html"
+      )
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data));
+
+      let slideIndex = 0;
+
+      function showSlides() {
+        const slides = document.querySelectorAll(".gambar-percetakan");
+        const dots = document.querySelectorAll(".dot");
+
+        slides.forEach((slide, index) => {
+          slide.style.display = index === slideIndex ? "block" : "none";
+        });
+
+        dots.forEach((dot, index) => {
+          dot.className = dot.className.replace(" active", "");
+          if (index === slideIndex) dot.className += " active";
+        });
+      }
+
+      function changeSlide(n) {
+        const slides = document.querySelectorAll(".gambar-percetakan");
+        slideIndex = (slideIndex + n + slides.length) % slides.length;
+        showSlides();
+      }
+
+      function currentSlide(n) {
+        slideIndex = n;
+        showSlides();
+      }
+
+      setInterval(() => {
+        changeSlide(1);
+      }, 4000);
+
+      showSlides();
+    </script>
+  </body>
+</html>

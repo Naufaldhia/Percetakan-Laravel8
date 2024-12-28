@@ -1,0 +1,71 @@
+/* Style Utama */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.about-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-section p {
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+.content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.about-item {
+  flex: 1 1 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-item i {
+  font-size: 2em;
+  color: #0073e6;
+  margin-bottom: 10px;
+}
+
+.about-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.about-item p {
+  color: #555;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .content-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
